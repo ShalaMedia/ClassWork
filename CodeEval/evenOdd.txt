@@ -1,0 +1,50 @@
+CE Even Odd
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace methodEvenOdd
+{
+    class Program
+    {
+        static bool EvenOdd(int num)
+        {
+           if (num %2 == 0)
+           {
+               return true;
+           }
+           else
+           {
+               return false;
+           }
+        }
+
+        static int Add(int num1, int num2)
+        {
+            int sum = num1 + num2;
+            return sum;
+        }
+
+        static void Main(string[] args)
+        {
+            int num1 = 1;
+            int num2 = 2;
+            int result = Add(num1, num2);
+            
+            if ( EvenOdd(result) == true)
+            {
+                Console.WriteLine("Even");
+            }
+            
+            else 
+            {
+                Console.WriteLine("Odd");
+            }
+            Console.ReadLine();
+
+        }
+    }
+}

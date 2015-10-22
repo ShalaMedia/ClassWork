@@ -1,0 +1,28 @@
+CE Reverse Words
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace reverseWords
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string line = "Hello Word Hello Code";
+            char[] array = line.ToCharArray();
+            Array.Reverse(array);
+            
+
+            foreach (char myChar in array)
+            {
+                Console.Write(myChar);
+               
+            }
+                Console.ReadLine();
+        }
+    }
+}

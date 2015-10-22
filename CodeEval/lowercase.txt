@@ -1,0 +1,28 @@
+CE Lowercase
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lowerCase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] line = { "HELLO CODEEVAL", "This is some text" };
+            
+            foreach (string s in line)
+            System.Console.WriteLine(s.ToLower());
+
+            System.Console.ReadLine();
+
+
+
+        }
+            
+           
+    }
+}

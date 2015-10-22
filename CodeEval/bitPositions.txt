@@ -1,0 +1,23 @@
+CE Bit Positions
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace bitPos
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string line = "86, 2, 3";
+            string[] array = line.Split();
+            string s = Convert.ToString(line);
+            int lenOfNum = line.Length;
+
+
+        }
+    }
+}
