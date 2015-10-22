@@ -1,0 +1,55 @@
+Dictionary Program
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace dictionaryInClass
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           /* Dictionary<string, int> studentScores = new Dictionary<string, int>();
+
+            studentScores.Add("StudentA", 89);
+
+            studentScores.Add("StudentB", 75);
+
+            studentScores.Add("StudentC", 94);
+
+            studentScores.Add("StudentD", 98);
+
+            foreach(KeyValuePair<string, int> student in studentScores)
+            {
+                Console.WriteLine();
+            }*/
+
+            Dictionary<string, int> zoo = new Dictionary<string, int>();
+            zoo.Add("Lion", 1);
+            zoo.Add("Giraffe", 2);
+            zoo.Add("Bear", 3);
+            zoo.Add("Panda", 4);
+            zoo.Add("Koala", 5);
+            zoo.Add("Elephant", 6);
+            zoo.Add("Peacock", 7);
+            zoo.Add("Zebra", 8);
+            zoo.Add("Shark", 9);
+            zoo.Add("Flamingo", 10);
+
+            int max = zoo.Values.Max();
+            //Console.WriteLine(max);
+            int min = zoo.Values.Min();
+            string result = zoo.FirstOrDefault(x => x.Value == min).Key;
+            zoo.Remove(result);
+
+            foreach (KeyValuePair<string, int> animal in zoo)
+            {
+                
+                Console.WriteLine(animal);
+            }
+        }
+    }
+}

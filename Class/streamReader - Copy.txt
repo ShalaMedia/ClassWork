@@ -1,0 +1,32 @@
+Stream Reader Program
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace fileReader
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StreamReader reader = new StreamReader("..\\..\\Sample.txt"); //To access a file
+            using (reader) // The keyword "using" automatically closes the stream. Otherwise, you need to write reader.Close(); outside of the while loop.
+            {
+                int lineNumber = 0; //Since we have multiple lines to print, we need to have a starting value for the lines.
+                string line = reader.ReadLine(); //Created a string line to = reader.ReadLine so the program can read the file when passed through WriteLine.
+                while (line != null) //Creating a loop so that we can increment the lineNumber. The keyword "null" tells it to stop when there are no more lines.
+                {
+                    lineNumber++;
+                    Console.WriteLine("Line {0}: {1}", lineNumber, line);
+                    line = reader.ReadLine();
+                }
+                reader.Close();
+             }
+
+         }
+    }
+}

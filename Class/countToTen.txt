@@ -1,0 +1,28 @@
+Count To 10 With Loop
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace countTo10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int counter;
+           
+            for  (counter = 1; counter <= 10; counter++)
+
+            {
+                System.Console.Write(counter);
+            
+            }
+        System.Console.ReadLine();
+
+        }
+    }
+}

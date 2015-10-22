@@ -1,0 +1,29 @@
+Mult Table
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace multTable
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+                for (int top = 1; top <= 12; top++)
+           
+                for (int side = 1; side <= 12; side++) 
+                {
+                    System.Console.Write(String.Format("{0, 4}", top * side));
+
+                }
+
+                System.Console.WriteLine();
+         }
+     }
+}
+
+

@@ -1,0 +1,96 @@
+T-Shirt Shop Program With Enum and Class
+
+Class:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TShirtShop
+{
+        
+    public class TShirt
+           {
+                //fields
+                private EnumTShirt.TShirtSize size;
+                private EnumTShirt.TShirtColor color;
+        
+                //properties
+                public EnumTShirt.TShirtSize Size{
+                    get{return this.size;}
+                    set{this.size = value;}
+                }
+                public EnumTShirt.TShirtColor Color{
+                    get{return this.color;}
+                    set{this.color= value;}
+                }
+                 //constructors
+                    //default
+                public TShirt()
+                {
+                    this.Color = EnumTShirt.TShirtColor.Red;
+                    this.Size = EnumTShirt.TShirtSize.M;
+                }
+                public TShirt(EnumTShirt.TShirtSize s, EnumTShirt.TShirtColor c)
+                   {
+                      this.Size = s;
+                      this.Color = c;
+                   }
+        
+
+   }
+}
+
+
+
+Enum:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TShirtShop
+{
+    class EnumTShirt
+    {
+        public enum TShirtSize
+        {
+           XL = 4, L = 3, M = 2, S = 1
+        }
+        public enum TShirtColor
+        {
+            Red, Blue, Green 
+        }
+    }
+}
+
+
+Program:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TShirtShop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            TShirt order1 = new TShirt(EnumTShirt.TShirtSize.S,EnumTShirt.TShirtColor.Green); 
+            TShirt order2 = new TShirt(EnumTShirt.TShirtSize.L,EnumTShirt.TShirtColor.Blue);
+            TShirt order3 = new TShirt(EnumTShirt.TShirtSize.M,EnumTShirt.TShirtColor.Red);
+
+            Console.WriteLine("Customer 1 ordered:" + (int)order1.Size + " " + order1.Color);
+            Console.WriteLine("Customer 2 ordered:" + (int)order2.Size + " " + order2.Color);
+            Console.WriteLine("Customer 3 ordered:" + (int)order3.Size + " " + order3.Color);
+        }
+
+    }
+}
