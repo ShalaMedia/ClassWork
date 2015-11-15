@@ -1,0 +1,298 @@
+Numerology Calculater For Destiny Number, Soul Urge Number and Life Path
+Number using full name and birthdate.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace numerologyCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome! Please enter your full name, enter english characters only.");
+
+            string userName = Console.ReadLine();
+            string userName2 = userName.ToLower();
+            char[] letters = userName2.ToCharArray();
+            int sum1 = 0;
+
+            foreach (char letter in letters)
+            {
+                switch (letter)
+                {
+                    case 'a':
+                    case 'j':
+                    case 's':
+                        sum1 = sum1 + 1;
+                        break;
+
+                    case 'b':
+                    case 'k':
+                    case 't':
+                        sum1 = sum1 + 2;
+                        break;
+
+                    case 'c':
+                    case 'l':
+                    case 'u':
+                        sum1 = sum1 + 3;
+                        break;
+
+                    case 'd':
+                    case 'm':
+                    case 'v':
+                        sum1 = sum1 + 4;
+                        break;
+
+                    case 'e':
+                    case 'n':
+                    case 'w':
+                        sum1 = sum1 + 5;
+                        break;
+
+                    case 'f':
+                    case 'o':
+                    case 'x':
+                        sum1 = sum1 + 6;
+                        break;
+
+                    case 'g':
+                    case 'p':
+                    case 'y':
+                        sum1 = sum1 + 7;
+                        break;
+
+                    case 'h':
+                    case 'q':
+                    case 'z':
+                        sum1 = sum1 + 8;
+                        break;
+
+                    case 'i':
+                    case 'r':
+                        sum1 = sum1 + 9;
+                        break;
+
+                    case ' ':
+                        int space = 0;
+                        break;
+
+                    default:
+                        Console.WriteLine("Incorrect character entry, please try again!"); // whatever you need for an invalid char
+                        break;
+                }
+
+            }
+
+            string line = sum1.ToString();
+
+            char[] linearr = line.ToCharArray();
+
+            int num;
+
+            string item;
+
+            int sum = 0;
+
+
+
+            for (int index = 0; index < linearr.Length; index++)
+            {
+
+                item = Convert.ToString(linearr[index]);
+
+                num = int.Parse(item);
+
+                sum = sum + num;
+
+            }
+
+
+            string line2 = sum.ToString();
+
+            char[] linearr2 = line2.ToCharArray();
+
+            int num1;
+
+            string item1;
+
+            int sum2 = 0;
+
+
+
+            for (int index = 0; index < linearr2.Length; index++)
+            {
+
+                item1 = Convert.ToString(linearr2[index]);
+
+                num1 = int.Parse(item1);
+
+                sum2 = sum2 + num1;
+
+            }
+            Console.WriteLine("Your destiny number is " + sum2 + ". Now press enter for your soul urge number!");
+
+
+            string vowelName = Console.ReadLine();
+            string vowelName2 = vowelName.ToLower();
+            string vowelName3 = "abcdefghijklmnopqrstuvwxyz";
+            string output = vowelName3.Replace("b", string.Empty)
+                      .Replace("c", string.Empty)
+                      .Replace("d", string.Empty)
+                      .Replace("f", string.Empty)
+                      .Replace("g", string.Empty)
+                      .Replace("h", string.Empty)
+                      .Replace("j", string.Empty)
+                      .Replace("k", string.Empty)
+                      .Replace("l", string.Empty)
+                      .Replace("m", string.Empty)
+                      .Replace("n", string.Empty)
+                      .Replace("p", string.Empty)
+                      .Replace("q", string.Empty)
+                      .Replace("r", string.Empty)
+                      .Replace("s", string.Empty)
+                      .Replace("t", string.Empty)
+                      .Replace("v", string.Empty)
+                      .Replace("w", string.Empty)
+                      .Replace("x", string.Empty)
+                      .Replace("y", string.Empty)
+                      .Replace("z", string.Empty);
+
+            char[] letter1 = output.ToCharArray();
+            int vowelSum = 0;
+            int vowelSumSpace = 0;
+
+            foreach (char letter in letters)
+            {
+                switch (letter)
+                {
+                    case 'a':
+                        vowelSum = vowelSum + 1;
+                        break;
+                    case 'e':
+                        vowelSum = vowelSum + 5;
+                        break;
+                    case 'i':
+                        vowelSum = vowelSum + 9;
+                        break;
+                    case 'o':
+                        vowelSum = vowelSum + 6;
+                        break;
+                    case 'u':
+                        vowelSum = vowelSum + 3;
+                        break;
+                    case ' ':
+                        vowelSumSpace = 0;
+                        break;
+                    /*default:
+                        Console.WriteLine("Invalid character entry!");
+                        break;*/
+                }
+
+            }
+
+            //Console.WriteLine(vowelSum);
+
+            string vowelSumString = vowelSum.ToString();
+
+
+            char[] vowelArr = vowelSumString.ToCharArray();
+
+
+            int vowel1;
+
+            int vowel3 = 0;
+
+
+
+            for (int index2 = 0; index2 < vowelArr.Length; index2++)
+            {
+
+                item = Convert.ToString(vowelArr[index2]);
+
+                vowel1 = int.Parse(item);
+
+                vowel3 = vowel3 + vowel1;
+
+            }
+            Console.WriteLine("Your soul urge number is " + vowel3 + ". Now enter your birthdate! Ex. 01/01/2001");
+            string bDate = Console.ReadLine();
+            string bDateReplace = bDate.Replace("/", string.Empty)
+                                  .Replace(" ", string.Empty);
+            char[] bDateChar = bDateReplace.ToCharArray();
+
+            int bDate1;
+
+            int bDate2 = 0;
+
+
+
+            for (int index4 = 0; index4 < bDateChar.Length; index4++)
+            {
+
+                item = Convert.ToString(bDateChar[index4]);
+
+                bDate1 = int.Parse(item);
+                bDate2 = bDate2 + bDate1;
+
+
+            }
+
+            string simpBDay = bDate2.ToString();
+
+
+            char[] simpBDayChar = simpBDay.ToCharArray();
+
+
+            int finNum;
+
+            int finNum1 = 0;
+
+
+
+            for (int index2 = 0; index2 < simpBDayChar.Length; index2++)
+            {
+
+                item = Convert.ToString(simpBDayChar[index2]);
+
+                finNum = int.Parse(item);
+
+                finNum1 = finNum1 + finNum;
+
+            }
+         
+
+            string lastNum = finNum1.ToString();
+
+
+            char[] lastNumChar = lastNum.ToCharArray();
+
+
+            int lastNum1;
+
+            int lastNum2 = 0;
+
+
+
+            for (int index2 = 0; index2 < lastNumChar.Length; index2++)
+            {
+                item = Convert.ToString(lastNumChar[index2]);
+
+                lastNum1 = int.Parse(item);
+
+                lastNum2 = lastNum2 + lastNum1;
+             }
+            Console.WriteLine("Your Life Path Number is " + lastNum2);
+        }
+    }
+}  
+
+
+   
+     
+ 
+
